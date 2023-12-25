@@ -121,6 +121,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Billboard.cs" />
+    <Compile Include="Model\Cinema.cs" />
+    <Compile Include="Model\Movie.cs" />
+    <Compile Include="Model\Ticket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -152,6 +156,10 @@
       <Project>{b272ac1d-f776-4fad-8157-586ff385d53b}</Project>
       <Name>WorkingBD</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Element\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
