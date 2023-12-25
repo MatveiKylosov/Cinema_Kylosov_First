@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema_Kylosov.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
