@@ -2,6 +2,7 @@
 using Cinema_Kylosov.Element;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,8 +34,8 @@ namespace Cinema_Kylosov
             UpdateLists();
             CreateView();
         }
-
-        public void UpdateLists()
+    
+    public void UpdateLists()
         {
             AllCinema = CinemaContext.AllCinemas();
             AllMovie = MovieContext.AllMovies();

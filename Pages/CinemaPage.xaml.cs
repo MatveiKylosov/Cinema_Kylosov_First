@@ -30,12 +30,15 @@ namespace Cinema_Kylosov.Pages
             Name.Text = x.Name;
             Number_of_Halls.Text = $"{x.NumberOfHalls}";
             Number_of_Seats.Text = $"{x.NumberOfSeats}";
+
             billboards = MainWindow.main.AllBillboard.FindAll(f => f.CinemaID == x.ID);
+            foreach (BillboardContext f in billboards)
+                parent.Children.Add(new Element.BillboardItem(f));
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

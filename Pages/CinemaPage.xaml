@@ -27,7 +27,7 @@
         </Grid>
 
         <Grid Grid.Row="2">
-            <ScrollViewer x:Name="scroll_main" VerticalScrollBarVisibility="Auto" Margin="0,80,0,0">
+            <ScrollViewer x:Name="scroll_main" VerticalScrollBarVisibility="Auto" Margin="0,0,0,0">
                 <Grid Width="{Binding ElementName=scroll_main, Path=ActualWidth}">
                     <WrapPanel x:Name="parent" Orientation="Horizontal" HorizontalAlignment="Center">
 

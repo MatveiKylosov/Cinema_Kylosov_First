@@ -107,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Element\BillboardItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Element\CinemaItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +127,9 @@
     <Compile Include="Classes\CinemaContext.cs" />
     <Compile Include="Classes\MovieContext.cs" />
     <Compile Include="Classes\TicketContext.cs" />
+    <Compile Include="Element\BillboardItem.xaml.cs">
+      <DependentUpon>BillboardItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Element\CinemaItem.xaml.cs">
       <DependentUpon>CinemaItem.xaml</DependentUpon>
     </Compile>
@@ -130,6 +137,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\BillboardPages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CinemaPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,6 +151,9 @@
     <Compile Include="Model\Cinema.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Ticket.cs" />
+    <Compile Include="Pages\BillboardPages.xaml.cs">
+      <DependentUpon>BillboardPages.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CinemaPage.xaml.cs">
       <DependentUpon>CinemaPage.xaml</DependentUpon>
     </Compile>

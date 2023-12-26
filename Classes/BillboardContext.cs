@@ -43,6 +43,7 @@ namespace Cinema_Kylosov.Classes
         {
             MySqlConnection connection = Connection.OpenConnection();
             Connection.Query($"DELETE FROM `Cinema`.`Billboard` WHERE ID = {ID}", connection);
+            Connection.Query($"DELETE FROM `Cinema`.`Tickets` WHERE Billboard_ID = {ID}", connection);
             Connection.CloseConnection(connection);
         }
 
