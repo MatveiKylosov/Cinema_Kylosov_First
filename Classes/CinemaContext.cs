@@ -37,6 +37,20 @@ namespace Cinema_Kylosov.Classes
 
             return allCinemas;
         }
+
+        public void DeleteCinema()
+        {
+            MySqlConnection connection = Connection.OpenConnection();
+            Connection.Query($"DELETE FROM `Cinema`.`Cinemas` WHERE ID = {ID}", connection);
+            Connection.CloseConnection(connection);
+        }
+
+        public void UpdateCinema(string name, int numberOfHalls, int numberOfSeats)
+        {
+            MySqlConnection connection = Connection.OpenConnection();
+            Connection.Query($"UPDATE `Cinema`.`Cinemas` SET Name = '{name}', NumberOfHalls = {numberOfHalls}, NumberOfSeats = {numberOfSeats} WHERE ID = {ID}", connection);
+            Connection.CloseConnection(connection);
+        }
     }
 
 }

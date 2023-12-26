@@ -1,5 +1,4 @@
 ﻿using Cinema_Kylosov.Classes;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,36 +13,34 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WorkingBD;
 
-namespace Cinema_Kylosov.Element
+namespace Cinema_Kylosov.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CinemaItem.xaml
+    /// Логика взаимодействия для CinemaPage.xaml
     /// </summary>
-    public partial class CinemaItem : UserControl
+    public partial class CinemaPage : Page
     {
         CinemaContext cinema;
-        public CinemaItem(CinemaContext x)
+        List<BillboardContext> billboards;
+        public CinemaPage(CinemaContext x)
         {
             InitializeComponent();
             cinema = x;
             Name.Text = x.Name;
             Number_of_Halls.Text = $"{x.NumberOfHalls}";
             Number_of_Seats.Text = $"{x.NumberOfSeats}";
+            billboards = MainWindow.main.AllBillboard.FindAll(f => f.CinemaID == x.ID);
         }
 
-        private void Open_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.main.OpenPages(new Pages.CinemaPage(cinema));
-
+            
         }
 
-        private void Delete_Click(object sender, RoutedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            cinema.DeleteCinema();
-            MainWindow.main.UpdateLists();
-            MainWindow.main.CreateView();
+            MainWindow.main.ClosePages();
         }
     }
 }

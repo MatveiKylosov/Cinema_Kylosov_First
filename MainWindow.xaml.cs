@@ -31,6 +31,7 @@ namespace Cinema_Kylosov
             InitializeComponent();
             main = this;
             UpdateLists();
+            CreateView();
         }
 
         public void UpdateLists()
@@ -41,15 +42,16 @@ namespace Cinema_Kylosov
             AllTicket = TicketContext.AllTickets();
         }
 
+        public void CreateView()
+        {
+            parent.Children.Clear();
+            foreach (var x in AllCinema)
+                parent.Children.Add(new Element.CinemaItem(x));
+            //Возможность добавления нового кинотеатра
+        }
+
         public void OpenPages(Page page)
         {
-            switch(page)
-            {
-                default:
-                    NamePage.Content = "";
-                    break;
-            }
-
             frame.Navigate(page);
 
             frame.Visibility = Visibility.Visible;

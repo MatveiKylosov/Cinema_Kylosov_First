@@ -37,6 +37,20 @@ namespace Cinema_Kylosov.Classes
 
             return allMovies;
         }
+
+        public void DeleteMovie()
+        {
+            MySqlConnection connection = Connection.OpenConnection();
+            Connection.Query($"DELETE FROM `Cinema`.`Movies` WHERE ID = {ID}", connection);
+            Connection.CloseConnection(connection);
+        }
+
+        public void UpdateMovie(string name, string genre, int duration)
+        {
+            MySqlConnection connection = Connection.OpenConnection();
+            Connection.Query($"UPDATE `Cinema`.`Movies` SET Name = '{name}', Genre = '{genre}', Duration = {duration} WHERE ID = {ID}", connection);
+            Connection.CloseConnection(connection);
+        }
     }
 
 }

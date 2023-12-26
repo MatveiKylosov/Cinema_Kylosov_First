@@ -38,5 +38,19 @@ namespace Cinema_Kylosov.Classes
 
             return allBillboards;
         }
+
+        public void DeleteBillboard()
+        {
+            MySqlConnection connection = Connection.OpenConnection();
+            Connection.Query($"DELETE FROM `Cinema`.`Billboard` WHERE ID = {ID}", connection);
+            Connection.CloseConnection(connection);
+        }
+
+        public void UpdateBillboard(int cinemaID, int movieID, DateTime sessionTime, int ticketPrice)
+        {
+            MySqlConnection connection = Connection.OpenConnection();
+            Connection.Query($"UPDATE `Cinema`.`Billboard` SET CinemaID = {cinemaID}, MovieID = {movieID}, SessionTime = '{sessionTime.ToString("yyyy-MM-dd HH:mm:ss")}', TicketPrice = {ticketPrice} WHERE ID = {ID}", connection);
+            Connection.CloseConnection(connection);
+        }
     }
 }
