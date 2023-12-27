@@ -35,7 +35,7 @@ namespace Cinema_Kylosov.Element
 
         private void Open_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.main.OpenPages(new Pages.BillboardPages(billboard));
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)

@@ -1,0 +1,31 @@
+CREATE TABLE `Billboard` (
+  `ID` int(11) NOT NULL,
+  `Cinema_ID` int(11) DEFAULT NULL,
+  `Movie_ID` int(11) DEFAULT NULL,
+  `Session_Time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Ticket_Price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
+CREATE TABLE `Billboard` (
+  `ID` int(11) NOT NULL,
+  `Cinema_ID` int(11) DEFAULT NULL,
+  `Movie_ID` int(11) DEFAULT NULL,
+  `Session_Time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Ticket_Price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
+CREATE TABLE `Movies` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Genre` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Duration` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
+CREATE TABLE `Tickets` (
+  `ID` int(11) NOT NULL,
+  `Billboard_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci

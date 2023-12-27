@@ -5,8 +5,39 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Cinema_Kylosov.Pages"
       mc:Ignorable="d" >
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-    <Grid>
-        
+        <Grid Margin="15">
+            <TextBlock  x:Name="Name" Text="Кинотеатр Москва" FontWeight="Bold" FontSize="26" Foreground="White" Margin="15,15,10,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Афиша -" FontWeight="Bold" FontSize="16" Foreground="White" Margin="24,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="ID" FontSize="16" Margin="186,60,28,0" VerticalAlignment="Top" Text="1" Foreground="White"/>
+
+            <TextBlock Text="Фильм -" FontWeight="Bold" FontSize="16" Foreground="White" Margin="24,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="Movie" FontSize="16" Margin="174,100,40,0" VerticalAlignment="Top"/>
+
+            <TextBlock Text="Дата -" FontWeight="Bold" FontSize="16" Foreground="White" Margin="24,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox x:Name="Date" FontSize="16" Margin="174,140,40,0" VerticalAlignment="Top"/>
+
+            <TextBlock Text="Цена билета -" FontWeight="Bold" FontSize="16" Foreground="White" Margin="24,180,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox x:Name="Price" FontSize="16" Margin="174,180,40,0" VerticalAlignment="Top"/>
+
+            <Button Content="Сохранить" Margin="0,220,140,20" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="125"  Click="Save_Click"/>
+            <Button Content="Выйти" Margin="150,220,15,20" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"    Width="125" Click="Exit_Click"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <ScrollViewer x:Name="scroll_main" VerticalScrollBarVisibility="Auto" Margin="0,0,0,0">
+                <Grid Width="{Binding ElementName=scroll_main, Path=ActualWidth}">
+                    <WrapPanel x:Name="parent" Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    </WrapPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>
