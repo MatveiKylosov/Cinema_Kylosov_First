@@ -45,10 +45,10 @@ namespace Cinema_Kylosov.Classes
             Connection.CloseConnection(connection);
         }
 
-        public void UpdateCinema(string name, int numberOfHalls, int numberOfSeats)
+        public void UpdateCinema(int numberOfHalls, int numberOfSeats)
         {
             MySqlConnection connection = Connection.OpenConnection();
-            Connection.Query($"UPDATE `Cinema`.`Cinemas` SET Name = '{name}', NumberOfHalls = {numberOfHalls}, NumberOfSeats = {numberOfSeats} WHERE ID = {ID}", connection);
+            Connection.Query($"UPDATE `Cinema`.`Cinemas` SET Number_of_Halls = {numberOfHalls}, Number_of_Seats = {numberOfSeats} WHERE ID = {ID}", connection);
             Connection.CloseConnection(connection);
         }
     }

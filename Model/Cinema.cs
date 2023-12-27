@@ -8,6 +8,7 @@ namespace Cinema_Kylosov.Model
 {
     public class Cinema
     {
+
         public int ID { get; set; }
         public string Name { get; set; }
         public int NumberOfHalls { get; set; }
@@ -22,5 +23,6 @@ namespace Cinema_Kylosov.Model
             NumberOfHalls = numberOfHalls;
             NumberOfSeats = numberOfSeats;
         }
+
     }
 }

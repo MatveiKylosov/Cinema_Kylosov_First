@@ -115,6 +115,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Element\MovieItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -132,6 +136,9 @@
     </Compile>
     <Compile Include="Element\CinemaItem.xaml.cs">
       <DependentUpon>CinemaItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Element\MovieItem.xaml.cs">
+      <DependentUpon>MovieItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

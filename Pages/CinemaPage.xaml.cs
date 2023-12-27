@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,7 +23,7 @@ namespace Cinema_Kylosov.Pages
     public partial class CinemaPage : Page
     {
         CinemaContext cinema;
-        List<BillboardContext> billboards;
+
         public CinemaPage(CinemaContext x)
         {
             InitializeComponent();
@@ -31,19 +32,33 @@ namespace Cinema_Kylosov.Pages
             Number_of_Halls.Text = $"{x.NumberOfHalls}";
             Number_of_Seats.Text = $"{x.NumberOfSeats}";
 
-            billboards = MainWindow.main.AllBillboard.FindAll(f => f.CinemaID == x.ID);
-            foreach (BillboardContext f in billboards)
+            foreach (BillboardContext f in MainWindow.main.AllBillboard.FindAll(f => f.CinemaID == x.ID))
                 parent.Children.Add(new Element.BillboardItem(f));
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            cinema.UpdateCinema(int.Parse(Number_of_Halls.Text), int.Parse(Number_of_Seats.Text));
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.main.ClosePages();
+        }
+
+
+        private void NOH(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void NOS(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

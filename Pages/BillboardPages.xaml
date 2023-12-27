@@ -24,10 +24,13 @@
             <TextBox x:Name="Date" FontSize="16" Margin="174,140,40,0" VerticalAlignment="Top"/>
 
             <TextBlock Text="Цена билета -" FontWeight="Bold" FontSize="16" Foreground="White" Margin="24,180,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <TextBox x:Name="Price" FontSize="16" Margin="174,180,40,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="Price" FontSize="16" Margin="174,180,40,0" VerticalAlignment="Top" TextInput="Price_Change"/>
 
-            <Button Content="Сохранить" Margin="0,220,140,20" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="125"  Click="Save_Click"/>
-            <Button Content="Выйти" Margin="150,220,15,20" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"    Width="125" Click="Exit_Click"/>
+            <TextBlock Text="Билеты" FontWeight="Bold" FontSize="16" Foreground="White" Margin="24,220,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox x:Name="Tickets" FontSize="16" Margin="174,220,40,0" VerticalAlignment="Top" TextInput="Price_Change"/>
+
+            <Button Content="Сохранить" Margin="0,260,140,00" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="125"  Click="Save_Click"/>
+            <Button Content="Выйти" Margin="150,260,15,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"    Width="125" Click="Exit_Click"/>
         </Grid>
 
         <Grid Grid.Row="2">

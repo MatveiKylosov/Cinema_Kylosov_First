@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Cinema_Kylosov.Element"
              mc:Ignorable="d"
              HorizontalAlignment="Center" VerticalAlignment="Center">
-    <Grid Background="White" Margin="5,15,5,15" >
+    <Grid Background="White" Margin="10,10,10,10" >
         <TextBlock Text="Афиша:" FontWeight="Bold" FontSize="16"  Margin="15,15,10,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <TextBlock x:Name="ID" FontSize="16"  Text="1" Margin="180,15,20,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 

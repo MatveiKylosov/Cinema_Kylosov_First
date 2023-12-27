@@ -35,7 +35,7 @@ namespace Cinema_Kylosov
             CreateView();
         }
     
-    public void UpdateLists()
+        public void UpdateLists()
         {
             AllCinema = CinemaContext.AllCinemas();
             AllMovie = MovieContext.AllMovies();
@@ -62,6 +62,7 @@ namespace Cinema_Kylosov
         {
             NamePage.Content = "Кинотеатры";
             frame.Visibility = Visibility.Hidden;
+            CreateView();
         }
     }
 }

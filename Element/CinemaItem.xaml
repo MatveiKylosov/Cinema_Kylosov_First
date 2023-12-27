@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cinema_Kylosov.Element"
              mc:Ignorable="d" >
-    <Grid Background="Gray" Margin="5,15,5,15">
+    <Grid Background="Gray" Margin="10,10,10,10">
         <TextBlock Text="Кинотеатр:" FontWeight="Bold" FontSize="16" Foreground="White" Margin="15,15,10,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <TextBlock x:Name="Name" FontSize="16" Foreground="White" Text="Москва" Margin="180,15,20,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
