@@ -34,7 +34,10 @@ namespace Cinema_Kylosov.Pages
             Price.Text = $"{b.TicketPrice}";
             
             foreach(MovieContext x in MainWindow.main.AllMovie)
+            {
                 Movie.Items.Add(x.Name);
+                parent.Children.Add(new Element.MovieItem(x));
+            }
 
             Movie.SelectedItem = MainWindow.main.AllMovie.Find(x => x.ID == b.MovieID).Name;
         }
